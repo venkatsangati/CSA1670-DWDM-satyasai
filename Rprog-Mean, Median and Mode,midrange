@@ -1,0 +1,38 @@
+# Data
+data <- c(10, 2, 7, 10, 3, 5)
+# Calculate Mean
+sum_data <- 0
+for (i in data) {
+  sum_data <- sum_data + i
+}
+mean_data <- sum_data / length(data)
+cat("Mean:", mean_data, "\n")
+
+# Calculate Median
+sorted_data <- sort(data)
+n <- length(sorted_data)
+if (n %% 2 == 0) {
+  median_data <- (sorted_data[n/2] + sorted_data[n/2 + 1]) / 2
+} else {
+  median_data <- sorted_data[(n + 1) / 2]
+}
+cat("Median:", median_data, "\n")
+
+# Calculate Mode
+value_count <- table(data)
+max_count <- max(value_count)
+mode_data <- as.numeric(names(value_count[value_count == max_count]))
+cat("Mode:", mode_data, "\n")
+
+
+---------
+# Given data
+data <- c(10, 2, 7, 10, 3, 5)
+# Find the minimum value
+min_value <- min(data)
+# Find the maximum value
+max_value <- max(data)
+# Calculate the mid-range
+mid_range <- (min_value + max_value) / 2
+# Print the result
+print(mid_range)
